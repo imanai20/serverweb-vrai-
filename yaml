@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  todo:
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - MYSQL_HOST=mariadb
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=info
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=info
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=test

@@ -1,0 +1,7 @@
+Ce projet comporte un portfolio et une todo list
+La To do list est en reverse proxy.
+Nous avons utilisé caddy 
+Pour lancer caddy : caddy run
+Pour lancer node : node app.js
+Dans la to do list vous pouvez ajouter une tache et la supprimer
+Le travail a été fait par Rayan Ilyès et Ervin 
